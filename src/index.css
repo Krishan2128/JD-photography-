@@ -79,18 +79,55 @@ img {
 }
 
 .loader-logo {
-    animation: loaderPulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@keyframes loaderPulse {
-    0%, 100% {
+.loader-initials {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: letterReveal 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.loader-subtext {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: letterReveal 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.3s forwards;
+}
+
+.loader-line-container {
+    width: 60px;
+    height: 1px;
+    background: var(--color-border);
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.loader-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--color-gold);
+    transform: translateX(-100%);
+    animation: loaderProgress 1.2s cubic-bezier(0.8, 0, 0.2, 1) infinite;
+}
+
+@keyframes letterReveal {
+    to {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0);
     }
-    50% {
-        opacity: 0.5;
-        transform: scale(0.95);
-    }
+}
+
+@keyframes loaderProgress {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 
 /* ===== HEADER ===== */

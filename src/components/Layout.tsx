@@ -49,8 +49,11 @@ export function Layout() {
     <div id="app-wrapper">
       <div className={`loader-overlay ${!loading ? "hidden" : ""}`}>
         <div className="jd-logo-container loader-logo">
-           <span className="jd-initials">JD</span>
-           <span className="jd-subtext" style={{marginTop: '10px'}}>PHOTOGRAPHY</span>
+           <span className="jd-initials loader-initials">JD</span>
+           <span className="jd-subtext loader-subtext" style={{marginTop: '10px'}}>PHOTOGRAPHY</span>
+        </div>
+        <div className="loader-line-container">
+           <div className="loader-line"></div>
         </div>
       </div>
 
