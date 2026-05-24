@@ -9,40 +9,32 @@ export default function Home() {
         .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 2; }
         .hero-content { position: relative; z-index: 3; padding: 20px; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; }
         
-        .hero-logo-emblem {
-           font-family: var(--font-display);
-           font-size: 3.5rem;
-           color: var(--color-gold);
-           border: 1px solid var(--color-gold);
-           border-radius: 50%;
-           width: 100px;
-           height: 100px;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           margin-bottom: 20px;
-           line-height: 1;
-           padding-top: 4px;
-        }
-        
         .hero-title { font-family: var(--font-display); font-size: 5rem; letter-spacing: 2px; margin-bottom: 0; font-weight: normal; }
         .hero-subtitle { font-family: var(--font-script); font-weight: 400; letter-spacing: 2px; font-size: 3.5rem; margin-bottom: 40px; text-transform: none; color: var(--color-gold); margin-top: -10px; }
         
         .lux-btn {
            display: inline-block;
-           padding: 16px 48px;
-           border: 1px solid var(--color-gold);
+           padding: 18px 56px;
+           border: 1px solid rgba(197, 160, 89, 0.4);
            color: var(--color-gold);
            text-decoration: none;
            font-family: var(--font-heading);
            font-size: 11px;
            text-transform: uppercase;
-           letter-spacing: 4px;
-           transition: all 0.5s ease;
-           background: rgba(0,0,0,0.2);
-           backdrop-filter: blur(4px);
+           letter-spacing: 5px;
+           transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+           background: linear-gradient(135deg, rgba(20,20,20,0.4) 0%, rgba(0,0,0,0.6) 100%);
+           backdrop-filter: blur(8px);
+           border-radius: 40px;
+           box-shadow: 0 4px 20px rgba(0,0,0,0.3), inset 0 0 15px rgba(197, 160, 89, 0.05);
         }
-        .lux-btn:hover { background: var(--color-gold); color: white; border-color: var(--color-gold); }
+        .lux-btn:hover { 
+           background: var(--color-gold); 
+           color: white; 
+           border-color: var(--color-gold);
+           box-shadow: 0 8px 30px rgba(197, 160, 89, 0.4); 
+           transform: translateY(-2px);
+        }
         
         .featured-section { background: var(--color-white); padding: 120px 20px; text-align: center; border-top: 1px solid var(--color-border); }
         .section-subtitle { font-family: var(--font-heading); font-size: 11px; text-transform: uppercase; letter-spacing: 4px; color: var(--color-gold); margin-bottom: 20px; display: block; }
@@ -67,10 +59,9 @@ export default function Home() {
         </video>
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <div className="hero-logo-emblem">JD</div>
           <h1 className="hero-title">JD Photography</h1>
           <p className="hero-subtitle">fine art aesthetics</p>
-          <Link to="/wedding" className="lux-btn">View Our Work</Link>
+          <Link to="/wedding" className="lux-btn">Look More</Link>
         </div>
       </section>
 
